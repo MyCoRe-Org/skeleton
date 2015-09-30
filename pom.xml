@@ -16,7 +16,6 @@
     <java.target.version>1.8</java.target.version>
     <mycore.version>2015.08-SNAPSHOT</mycore.version>
     <jetty.version>9.2.12.v20150709</jetty.version>
-    <tomcat7.version>7.0.63</tomcat7.version>
     <tomcat8.version>8.0.24</tomcat8.version>
     <cargo.version>1.4.15</cargo.version>
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
@@ -341,18 +340,6 @@
           </plugins>
         </pluginManagement>
       </build>
-    </profile>
-    <profile>
-      <id>tomcat7</id>
-      <activation>
-        <property>
-          <name>tomcat</name>
-          <value>7</value>
-        </property>
-      </activation>
-      <properties>
-        <tomcat.version>${tomcat7.version}</tomcat.version>
-      </properties>
     </profile>
     <profile>
       <id>tomcat8</id>

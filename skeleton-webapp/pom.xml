@@ -116,13 +116,6 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.mycore.solr</groupId>
-      <artifactId>solr</artifactId>
-      <version>4.10.4-SNAPSHOT</version>
-      <type>war</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>skeleton-module</artifactId>
       <version>${project.version}</version>
