@@ -3,21 +3,21 @@
   <parent>
     <groupId>org.mycore</groupId>
     <artifactId>mycore-parent</artifactId>
-    <version>27-SNAPSHOT</version>
+    <version>27</version>
   </parent>
   <groupId>org.mycore.skeleton</groupId>
   <artifactId>skeleton-parent</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>2015.11.0</version>
   <packaging>pom</packaging>
   <name>Skeleton</name>
   <description>A skeleton to start with new mycore application development</description>
   <inceptionYear>2015</inceptionYear>
   <properties>
     <java.target.version>1.8</java.target.version>
-    <mycore.version>2015.08-SNAPSHOT</mycore.version>
-    <jetty.version>9.2.12.v20150709</jetty.version>
-    <tomcat8.version>8.0.24</tomcat8.version>
-    <cargo.version>1.4.15</cargo.version>
+    <mycore.version>2015.11</mycore.version>
+    <jetty.version>9.3.5.v20151012</jetty.version>
+    <tomcat8.version>8.0.28</tomcat8.version>
+    <cargo.version>1.4.16</cargo.version>
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
     <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
