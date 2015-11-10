@@ -405,7 +405,7 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <li>
-              <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}">
+              <a href="{$ServletsBaseURL}derivate/update{$HttpSession}?id={$deriv}">
                 <!-- xsl:value-of select="i18n:translate('component.swf.derivate.updateFile')" / -->
                 Beschriftung bearbeiten
               </a>
