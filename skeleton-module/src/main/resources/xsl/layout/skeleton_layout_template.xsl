@@ -86,9 +86,9 @@
                 <div class="col-xs-6 col-sm-3 col-md-2">
                   <h4>Netzwerke</h4>
                   <ul class="social_links">
-                      <li><a href="#"><button type="button" class="social_icons social_icon_fb"></button>Facebook</a></li>
-                      <li><a href="#"><button type="button" class="social_icons social_icon_tw"></button>Twitter</a></li>
-                      <li><a href="#"><button type="button" class="social_icons social_icon_gg"></button>Google+</a></li>
+                      <li><a href="#"><button type="button" class="fa fa-facebook"></button>Facebook</a></li>
+                      <li><a href="#"><button type="button" class="fa fa-twitter"></button>Twitter</a></li>
+                      <li><a href="#"><button type="button" class="fa fa-google-plus"></button>Google+</a></li>
                   </ul>
                 </div>
                 <div class="col-xs-6 col-sm-3 col-md-2">
