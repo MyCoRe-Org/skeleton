@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <system systemId="mcrcommon-datamodel.xsd" uri="xsd/mcrcommon-datamodel-2015.11.fixed.xsd" />
+
+</catalog>
