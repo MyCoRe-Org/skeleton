@@ -48,6 +48,7 @@
               <usedDependencies>
                 <!-- used by this war -->
                 <useDependency>org.mycore:mycore-meta</useDependency>
+                <useDependency>org.mycore.mir:mir-common-resources</useDependency>
                 <useDependency>org.mycore.skeleton:skeleton-module</useDependency>
               </usedDependencies>
             </configuration>
@@ -115,6 +116,13 @@
     </plugins>
   </build>
   <dependencies>
+    <dependency>
+      <groupId>org.mycore.solr</groupId>
+      <artifactId>solr</artifactId>
+      <version>4.10.4.1-SNAPSHOT</version>
+      <type>war</type>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>skeleton-module</artifactId>
