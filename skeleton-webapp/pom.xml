@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.mycore.skeleton</groupId>
     <artifactId>skeleton-parent</artifactId>
-    <version>2016.02-SNAPSHOT</version>
+    <version>2016.02</version>
   </parent>
   <artifactId>skeleton-webapp</artifactId>
   <packaging>war</packaging>
@@ -118,7 +118,7 @@
     <dependency>
       <groupId>org.mycore.solr</groupId>
       <artifactId>solr</artifactId>
-      <version>4.10.4.1-SNAPSHOT</version>
+      <version>4.10.4</version>
       <type>war</type>
       <scope>provided</scope>
     </dependency>
@@ -135,7 +135,7 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-common-resources</artifactId>
-      <version>0.4-SNAPSHOT</version>
+      <version>0.4</version>
     </dependency>
   </dependencies>
 </project>

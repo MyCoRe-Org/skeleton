@@ -7,7 +7,7 @@
   </parent>
   <groupId>org.mycore.skeleton</groupId>
   <artifactId>skeleton-parent</artifactId>
-  <version>2016.02-SNAPSHOT</version>
+  <version>2016.02</version>
   <packaging>pom</packaging>
   <name>Skeleton</name>
   <description>A skeleton to start with new mycore application development</description>
@@ -400,4 +400,10 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <scm>
+    <connection>scm:svn:http://server.mycore.de/svn/maven/org.mycore/tags/Based on 2016.02 MyCoRe Release</connection>
+    <developerConnection>scm:svn:https://server.mycore.de/svn/maven/org.mycore/tags/Based on 2016.02 MyCoRe Release</developerConnection>
+    <url>http://www.mycore.de/viewvc/viewvc.cgi/maven/org.mycore/tags/Based on 2016.02 MyCoRe Release</url>
+  </scm>
 </project>
