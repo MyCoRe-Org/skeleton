@@ -13,7 +13,7 @@
   <description>A skeleton to start with new mycore application development</description>
   <inceptionYear>2015</inceptionYear>
   <properties>
-  	<!-- shall be in sync with corresponding MIR release -->
+    <!-- shall be in sync with corresponding MIR release -->
     <java.target.version>1.8</java.target.version>
     <mycore.version>2016.02</mycore.version>
     <jetty.version>9.3.7.v20160115</jetty.version>
