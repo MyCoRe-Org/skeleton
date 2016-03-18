@@ -3,11 +3,11 @@
   <parent>
     <groupId>org.mycore</groupId>
     <artifactId>mycore-parent</artifactId>
-    <version>28</version>
+    <version>29-SNAPSHOT</version>
   </parent>
   <groupId>org.mycore.skeleton</groupId>
   <artifactId>skeleton-parent</artifactId>
-  <version>2016.02</version>
+  <version>2016.03-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Skeleton</name>
   <description>A skeleton to start with new mycore application development</description>
@@ -15,7 +15,7 @@
   <properties>
     <!-- shall be in sync with corresponding MIR release -->
     <java.target.version>1.8</java.target.version>
-    <mycore.version>2016.02</mycore.version>
+    <mycore.version>2016.03-SNAPSHOT</mycore.version>
     <jetty.version>9.3.7.v20160115</jetty.version>
     <tomcat8.version>8.0.32</tomcat8.version>
     <node.version>v4.2.2</node.version>
@@ -31,9 +31,14 @@
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
     <cargo.debug.address>8295</cargo.debug.address>
     <cargo.debug.suspend>n</cargo.debug.suspend>
-    <changelog.since>2015-11-09</changelog.since>
+    <changelog.since>2016-03-18</changelog.since>
     <site.suffix />
   </properties>
+  <scm>
+    <connection>scm:svn:http://server.mycore.de/svn/maven/skeleton/trunk</connection>
+    <developerConnection>scm:svn:https://server.mycore.de/svn/maven/skeleton/trunk</developerConnection>
+    <url>http://www.mycore.de/viewvc/viewvc.cgi/maven/skeleton/trunk</url>
+  </scm>
   <pluginRepositories>
     <pluginRepository>
       <id>MyCoRe HQ</id>
@@ -144,14 +149,9 @@
           <version>${cargo.version}</version>
         </plugin>
         <plugin>
-          <groupId>org.lesscss</groupId>
-          <artifactId>lesscss-maven-plugin</artifactId>
-          <version>1.7.0.1.1</version>
-        </plugin>
-        <plugin>
-          <groupId>pl.allegro</groupId>
-          <artifactId>grunt-maven-plugin</artifactId>
-          <version>1.5.0</version>
+          <groupId>com.github.eirslett</groupId>
+          <artifactId>frontend-maven-plugin</artifactId>
+          <version>0.0.26</version>
         </plugin>
         <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
         <plugin>
@@ -334,6 +334,7 @@
                 <home>${project.build.directory}/catalina-base</home>
                 <configuration>
                   <properties>
+                    <cargo.rmi.port>${cargo.rmi.port}</cargo.rmi.port>
                     <cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
                     <cargo.tomcat.ajp.port>${cargo.tomcat.ajp.port}</cargo.tomcat.ajp.port>
                     <cargo.servlet.uriencoding>${cargo.servlet.uriencoding}</cargo.servlet.uriencoding>
@@ -382,22 +383,78 @@
             <artifactId>mycore-coma</artifactId>
           </exclusion>
           <exclusion>
-            <groupId>org.mycore</groupId>
-            <artifactId>mycore-sword</artifactId>
-          </exclusion>
-          <exclusion>
             <groupId>org.apache.maven.scm</groupId>
             <artifactId>maven-scm-provider-svnexe</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-bom</artifactId>
-        <version>2.3</version>
-        <scope>import</scope>
-        <type>pom</type>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-base</artifactId>
+        <version>${mycore.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-base</artifactId>
+        <version>${mycore.version}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-ifs</artifactId>
+        <version>${mycore.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-iview2</artifactId>
+        <version>${mycore.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-mods</artifactId>
+        <version>${mycore.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-pi</artifactId>
+        <version>${mycore.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-solr</artifactId>
+        <version>${mycore.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-sword</artifactId>
+        <version>${mycore.version}</version>
+        <exclusions>
+          <!-- MCR-1100 -->
+          <exclusion>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+          </exclusion>
+          <!-- MCR-1101 -->
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-user2</artifactId>
+        <version>${mycore.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-wfc</artifactId>
+        <version>${mycore.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
 </project>
+
+

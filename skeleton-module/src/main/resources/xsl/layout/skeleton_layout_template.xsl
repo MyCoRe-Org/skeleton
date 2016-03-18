@@ -14,9 +14,9 @@
   <xsl:strip-space elements="*" />
 
   <!-- Various versions -->
-  <xsl:variable name="bootstrap.version" select="'3.3.5'" />
+  <xsl:variable name="bootstrap.version" select="'3.3.6'" />
   <xsl:variable name="bootswatch.version" select="$bootstrap.version" />
-  <xsl:variable name="fontawesome.version" select="'4.2.0'" />
+  <xsl:variable name="fontawesome.version" select="'4.5.0'" />
   <xsl:variable name="jquery.version" select="'1.11.3'" />
   <xsl:variable name="jquery.migrate.version" select="'1.2.1'" />
   <!-- End of various versions -->

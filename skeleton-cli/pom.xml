@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.mycore.skeleton</groupId>
     <artifactId>skeleton-parent</artifactId>
-    <version>2016.02</version>
+    <version>2016.03-SNAPSHOT</version>
   </parent>
   <artifactId>skeleton-cli</artifactId>
   <packaging>pom</packaging>
@@ -75,7 +75,7 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.mycore.skeleton</groupId>
+      <groupId>${project.parent.groupId}</groupId>
       <artifactId>skeleton-module</artifactId>
       <version>${project.parent.version}</version>
       <scope>runtime</scope>
