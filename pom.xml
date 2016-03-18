@@ -400,10 +400,4 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <scm>
-    <connection>scm:svn:http://server.mycore.de/svn/maven/org.mycore/tags/Based on 2016.02 MyCoRe Release</connection>
-    <developerConnection>scm:svn:https://server.mycore.de/svn/maven/org.mycore/tags/Based on 2016.02 MyCoRe Release</developerConnection>
-    <url>http://www.mycore.de/viewvc/viewvc.cgi/maven/org.mycore/tags/Based on 2016.02 MyCoRe Release</url>
-  </scm>
 </project>
