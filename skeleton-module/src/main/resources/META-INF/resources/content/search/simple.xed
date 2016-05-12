@@ -11,8 +11,10 @@
 
       <xed:bind xpath="query">
         <xed:bind xpath="@mask" default="content/search/simple.xed" />
-        <xed:bind xpath="sortBy/field[@name]" default="created"/>
-        <xed:bind xpath="sortBy/field[@order]" default="ascending"/>
+        <xed:bind xpath="sortBy/field">
+          <xed:bind xpath="@name" default="created" />
+          <xed:bind xpath="@order" default="ascending" />
+        </xed:bind>
 
         <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
           <div class="panel panel-default">
