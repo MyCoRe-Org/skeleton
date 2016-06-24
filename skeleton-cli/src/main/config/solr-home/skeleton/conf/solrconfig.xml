@@ -819,11 +819,8 @@
        <int name="rows">20</int>
        <str name="df">allMeta</str>
        <str name="fl">*,score</str>
-       <!-- TODO: /select should only return "real" metadata objects - no derivates, files or childdocuments.
-            please add all your metadata object types here.
-            e.g.: <str name="fq">objectType:("disshab" OR "thesis" OR "document" OR "bundle")</str>
-       -->
-       <str name="fq">objectType:"simpledoc"</str>
+       
+       <str name="fq">objectKind:mycoreobject</str>
      </lst>
     <!-- In addition to defaults, "appends" params can be specified
          to identify values which should be appended to the list of
