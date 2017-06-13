@@ -295,7 +295,7 @@
       </dependency>
       <dependency>
         <groupId>org.mycore</groupId>
-        <artifactId>mycore-mods</artifactId>
+        <artifactId>mycore-solr</artifactId>
         <version>${mycore.version}</version>
       </dependency>
       <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
