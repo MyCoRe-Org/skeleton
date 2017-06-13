@@ -34,7 +34,7 @@
                     <xed:bind xpath="condition0[@field='allMeta'][@operator='contains']/@value" default="*">
                       <input id="inputMeta" class="form-control" placeholder="in den Metadaten" type="text" />
                       <span data-toggle="tooltip" class="input-group-addon" title="Suchfeld für alle bibliografischen Angaben">
-                        <i class="glyphicon glyphicon-info-sign"></i>
+                        <i class="fa fa-info"></i>
                       </span>
                     </xed:bind>
                   </div>
@@ -51,7 +51,7 @@
                     <xed:bind xpath="condition1[@field='content'][@operator='contains']/@value">
                       <input id="inputContent" class="form-control" placeholder="in den Dateien" type="text" />
                       <span data-toggle="tooltip" class="input-group-addon" title="Suchfeld für den Inhalt von Dateien">
-                        <i class="glyphicon glyphicon-info-sign"></i>
+                        <i class="fa fa-info"></i>
                       </span>
                     </xed:bind>
                   </div>
