@@ -14,9 +14,8 @@
   <xsl:strip-space elements="*" />
 
   <!-- Various versions -->
-  <xsl:variable name="bootstrap.version" select="'3.3.6'" />
-  <xsl:variable name="bootswatch.version" select="$bootstrap.version" />
-  <xsl:variable name="fontawesome.version" select="'4.5.0'" />
+  <xsl:variable name="bootstrap.version" select="'3.3.7'" />
+  <xsl:variable name="fontawesome.version" select="'4.7.0'" />
   <xsl:variable name="jquery.version" select="'1.11.3'" />
   <xsl:variable name="jquery.migrate.version" select="'1.2.1'" />
   <!-- End of various versions -->
@@ -36,7 +35,7 @@
 
         <link href="{$WebApplicationBaseURL}css/fileupload.css" rel="stylesheet" />
         <link href="{$WebApplicationBaseURL}webjars/font-awesome/{$fontawesome.version}/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="{$WebApplicationBaseURL}webjars/bootstrap/{$bootstrap.version}/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="{$WebApplicationBaseURL}rsc/sass/bootstrap-skeleton.css" rel="stylesheet" />
         <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/jquery/{$jquery.version}/jquery.min.js"></script>
         <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/jquery-migrate/{$jquery.migrate.version}/jquery-migrate.min.js"></script>
 
@@ -113,10 +112,7 @@
           <!-- Bootstrap & Query-Ui button conflict workaround  -->
           if (jQuery.fn.button){jQuery.fn.btn = jQuery.fn.button.noConflict();}
         </script>
-        <!--
-        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/{$bootstrap.version}/js/bootstrap.min.js"></script>
-        -->
-        <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/bootstrap/{$bootstrap.version}/js/bootstrap.min.js"></script>
+       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/bootstrap-sass/{$bootstrap.version}/javascripts/bootstrap.min.js"></script>
         <script>
           $( document ).ready(function() {
             $('.overtext').tooltip();
@@ -142,6 +138,7 @@
         <nav>
           <ul class="nav navbar-nav pull-right">
             <xsl:call-template name="loginMenu" />
+            <xsl:call-template name="languageMenu" />
           </ul>
         </nav>
       </div>
