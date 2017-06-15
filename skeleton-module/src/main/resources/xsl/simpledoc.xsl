@@ -406,21 +406,20 @@
           <ul class="dropdown-menu dropdown-menu-right">
             <li>
               <a href="{$ServletsBaseURL}derivate/update{$HttpSession}?id={$deriv}">
-                <!-- xsl:value-of select="i18n:translate('component.swf.derivate.updateFile')" / -->
-                Beschriftung bearbeiten
+                <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
               </a>
             </li>
             <xsl:choose>
               <xsl:when test="$derivateWithURN=false()">
                 <li>
                   <a href="{$ServletsBaseURL}derivate/update{$HttpSession}?objectid={../../../@ID}&amp;id={$deriv}{$suffix}" class="option">
-                    <xsl:value-of select="i18n:translate('component.swf.derivate.addFile')" />
+                    <xsl:value-of select="i18n:translate('component.mods.metaData.options.addFile')" />
                   </a>
                 </li>
               </xsl:when>
               <xsl:otherwise>
-                <li><!-- xsl:value-of select="i18n:translate('component.swf.derivate.addFile')" /-->
-                  Bearbeitung wg. URN gesperrt
+                <li>
+                  <xsl:value-of select="i18n:translate('component.mods.metaData.options.derivateLocked')" />
                 </li>
               </xsl:otherwise>
             </xsl:choose>
@@ -442,7 +441,7 @@
             <xsl:if test="acl:checkPermission($deriv,'deletedb') and $derivateWithURN=false()">
               <li class="last">
                 <a href="{$ServletsBaseURL}derivate/delete{$HttpSession}?id={$deriv}" class="confirm_deletion option" data-text="{i18n:translate('mir.confirm.derivate.text')}">
-                  <xsl:value-of select="i18n:translate('component.swf.derivate.delDerivate')" />
+                  <xsl:value-of select="i18n:translate('component.mods.metaData.options.delDerivate')" />
                 </a>
               </li>
             </xsl:if>
