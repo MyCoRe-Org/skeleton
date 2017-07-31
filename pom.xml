@@ -23,7 +23,7 @@
     <hibernate.version>5.2.2.Final</hibernate.version>
     <java.target.version>1.8</java.target.version>
     <jetty.version>9.3.14.v20161028</jetty.version>
-    <mycore.version>2017.06.0-SNAPSHOT</mycore.version>
+    <mycore.version>2017.06.0.1-SNAPSHOT</mycore.version>
     <site.suffix />
   </properties>
   <scm>
