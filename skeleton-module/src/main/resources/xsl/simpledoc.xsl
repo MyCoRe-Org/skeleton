@@ -310,30 +310,13 @@
           </xsl:call-template>
           <xsl:text> ]</xsl:text>
         </span>
-        <span class="{$fileCss} fa fa-star">
-        </span>
+
+
         <span class="file_date">
           <xsl:call-template name="formatISODate">
             <xsl:with-param name="date" select="date[@type='lastModified']" />
             <xsl:with-param name="format" select="i18n:translate('metaData.date')" />
           </xsl:call-template>
-        </span>
-        <span class="file_preview">
-          <img src="{$WebApplicationBaseURL}images/icons/icon_common_disabled.png" alt="">
-            <xsl:if test="'.pdf' = translate(substring($fileName, string-length($fileName) - 3),'PDF','pdf')">
-              <xsl:attribute name="data-toggle">tooltip</xsl:attribute>
-              <xsl:attribute name="data-placement">top</xsl:attribute>
-              <xsl:attribute name="data-html">true</xsl:attribute>
-              <xsl:attribute name="data-title">
-                  <xsl:text>&lt;img src="</xsl:text>
-                  <xsl:value-of select="concat($WebApplicationBaseURL,'img/pdfthumb/',$filePath,'?centerThumb=no')" />
-                  <xsl:text>"&gt;</xsl:text>
-                </xsl:attribute>
-              <xsl:message>
-                PDF
-              </xsl:message>
-            </xsl:if>
-          </img>
         </span>
         <span class="file_name">
           <xsl:choose>
@@ -350,6 +333,9 @@
             </xsl:otherwise>
           </xsl:choose>
         </span>
+        <xsl:if test="concat($derId,'/',$maindoc) = $filePath">
+        	<span class="{$fileCss} fa fa-star" style="margin-left:10px"></span>
+        </xsl:if>
       </div>
     </div>
   </xsl:template>
