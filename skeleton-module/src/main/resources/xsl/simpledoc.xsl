@@ -359,6 +359,11 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <li>
+              <a href="{$ServletsBaseURL}derivate/update{$HttpSession}?objectid={../../../@ID}&amp;id={$deriv}{$suffix}" class="option">
+                <xsl:value-of select="i18n:translate('component.mods.metaData.options.addFile')" />
+              </a>
+            </li>
+            <li>
               <a href="{$ServletsBaseURL}derivate/update{$HttpSession}?id={$deriv}">
                 <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
               </a>
