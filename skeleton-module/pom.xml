@@ -4,7 +4,7 @@
   <parent>
     <artifactId>skeleton-parent</artifactId>
     <groupId>org.mycore.skeleton</groupId>
-    <version>2017.06.0-SNAPSHOT</version>
+    <version>2017.07-SNAPSHOT</version>
   </parent>
   <name>Skeleton: Application Module</name>
   <artifactId>skeleton-module</artifactId>
